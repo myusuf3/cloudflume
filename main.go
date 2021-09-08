@@ -14,7 +14,7 @@ func getDomains() (*Sites, error) {
 	return nil, nil
 }
 
-func get_external() string {
+func getExternal() string {
 	resp, err := http.Get("http://myexternalip.com/raw")
 	if err != nil {
 		return ""
@@ -28,7 +28,7 @@ func main() {
 	// domains, err := getDomains()
 
 	// get ip
-	ip := get_external()
+	ip := getExternal()
 	fmt.Println("external ip: ", ip)
 
 	// for domains
